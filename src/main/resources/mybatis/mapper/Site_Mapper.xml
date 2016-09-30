@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mappers">
+
+	<resultMap id="SiteResultMap" type="Site">
+			<id property="id" column="site_id"/>
+					<result column="url" property="url"/>
+					<result column="html" property="html"/>
+          <result column="pagerank" property="pageRank"/>
+					<collection  property="linksOut" column="site_id"
+								 javaType="List"
+				        ofType="Integer"
+								 select="mappers.getLinksOutBySiteId"
+								 fetchType="eager"
+					/>
+	</resultMap>
+
+	<select id="getAllSites" resultMap="SiteResultMap">
+		select * from prfinall.sites
+		order by pagerank
+	</select>
+
+	<update id="updatePageRank" parameterType="Site">
+    update sites set sites.pagerank = #{pagerank}
+	</update>
+
+	<delete id="deleteSiteById" parameterType="int">
+	 DELETE FROM prfinal.sites WHERE site_id= #{site_id}
+	</delete>
+
+	<insert id = "insert" parameterType="Site">
+		INSERT INTO prfinal.sites (site_id)
+		VALUES (#{site_id})
+		 <selectKey keyProperty = "id" resultType = "int" order = "AFTER">
+				select last_insert_id() as id
+		 </selectKey>
+	</insert>
+
+	</mapper>

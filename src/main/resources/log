@@ -1,0 +1,469 @@
+2016-09-30 15:40:44 DEBUG LogFactory:54 - Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2016-09-30 15:40:45 DEBUG PooledDataSource:54 - PooledDataSource forcefully closed/removed all connections.
+2016-09-30 15:40:45 DEBUG PooledDataSource:54 - PooledDataSource forcefully closed/removed all connections.
+2016-09-30 15:40:45 DEBUG PooledDataSource:54 - PooledDataSource forcefully closed/removed all connections.
+2016-09-30 15:40:45 DEBUG PooledDataSource:54 - PooledDataSource forcefully closed/removed all connections.
+2016-09-30 15:40:45 DEBUG JdbcTransaction:54 - Opening JDBC Connection
+2016-09-30 15:40:45 DEBUG PooledDataSource:54 - Created connection 764577347.
+2016-09-30 15:40:45 DEBUG JdbcTransaction:54 - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2d928643]
+2016-09-30 15:40:45 DEBUG getAllSites:54 - ==>  Preparing: select * from prfinall.sites order by pagerank 
+2016-09-30 15:40:45 DEBUG getAllSites:54 - ==> Parameters: 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 1(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 2(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 8
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 3(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 4(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 5
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 5(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 6(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 7(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 0
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 8(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 9
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 9(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 10(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 9
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 11(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 12(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 13
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 13(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 9
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 14(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 9
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 15(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 16(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 17(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 11
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 18(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 19(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 20(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 21(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 22(Integer)
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:45 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 23(Integer)
+2016-09-30 15:40:46 DEBUG getLinksOutBySiteId:54 - <====      Total: 4
+2016-09-30 15:40:46 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:46 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 24(Integer)
+2016-09-30 15:40:46 DEBUG getLinksOutBySiteId:54 - <====      Total: 4
+2016-09-30 15:40:46 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:46 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 25(Integer)
+2016-09-30 15:40:46 DEBUG getLinksOutBySiteId:54 - <====      Total: 4
+2016-09-30 15:40:46 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:46 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 26(Integer)
+2016-09-30 15:40:46 DEBUG getLinksOutBySiteId:54 - <====      Total: 4
+2016-09-30 15:40:46 DEBUG getAllSites:54 - <==      Total: 26
+2016-09-30 15:40:46 DEBUG JdbcTransaction:54 - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2d928643]
+2016-09-30 15:40:46 DEBUG JdbcTransaction:54 - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2d928643]
+2016-09-30 15:40:46 DEBUG PooledDataSource:54 - Returned connection 764577347 to pool.
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]
+2016-09-30 15:40:46 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 0 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 1 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 2 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 3 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 4 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 5 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 6 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 7 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 8 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 9 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 10 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 11 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 12 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 13 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 14 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 15 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 16 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 17 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 18 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 19 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 20 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 21 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 22 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 23 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 24 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:37 - startRank of site(vertex) 25 = 1.0
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 0 - 0.15000000000000002
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 1 - 0.8789156372680231
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 2 - 0.3368291024018534
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 3 - 0.9964428722634123
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 4 - 4.53315407721271
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 5 - 0.8402678251269653
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 6 - 0.6372919013168264
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 7 - 0.36180985507964414
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 8 - 0.21152110067575067
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 9 - 0.33769699204036185
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 10 - 0.5814022848022236
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 11 - 0.3406632550063402
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 12 - 0.3425219698284886
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 13 - 0.20823874681763493
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 14 - 0.3160239901587922
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 15 - 0.4001880141666639
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 16 - 0.19252885453290236
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 17 - 0.17337979871154435
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 18 - 0.4013047762618169
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 19 - 0.9699464536961105
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 20 - 0.4144015247455338
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 21 - 0.3159636872384002
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 22 - 0.2596903119765465
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 23 - 2.5727586398367417
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 24 - 3.780238338556528
+
+2016-09-30 15:40:46 INFO  PageRank:75 - pagerank of site 25 - 1.8708118745166793
+
+2016-09-30 15:40:46 INFO  PageRank:86 - convergenceRate = 5.755924926613812E-6, results are accurate enough
+2016-09-30 15:40:46 INFO  root:42 - Enter the keyword: 
+2016-09-30 15:40:49 INFO  root:45 - 
+2016-09-30 15:40:49 DEBUG JdbcTransaction:54 - Opening JDBC Connection
+2016-09-30 15:40:49 DEBUG PooledDataSource:54 - Checked out connection 764577347 from pool.
+2016-09-30 15:40:49 DEBUG JdbcTransaction:54 - Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2d928643]
+2016-09-30 15:40:49 DEBUG getAllSites:54 - ==>  Preparing: select * from prfinall.sites order by pagerank 
+2016-09-30 15:40:49 DEBUG getAllSites:54 - ==> Parameters: 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 1(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 2(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 8
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 3(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 4(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 5
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 5(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 6(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 7(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 0
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 8(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 9
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 9(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 10(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 9
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 11(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 12(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 13
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 13(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 9
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 14(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 9
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 15(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 16(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 17(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 11
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 18(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 19(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 10
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 20(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 21(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 22(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 12
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 23(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 4
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 24(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 4
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 25(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 4
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====>  Preparing: SELECT sites.site_id FROM sites INNER JOIN sites_have_links ON sites_have_links.id_in = sites.site_id WHERE sites_have_links.id_out = ?; 
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - ====> Parameters: 26(Integer)
+2016-09-30 15:40:49 DEBUG getLinksOutBySiteId:54 - <====      Total: 4
+2016-09-30 15:40:49 DEBUG getAllSites:54 - <==      Total: 26
+2016-09-30 15:40:49 DEBUG JdbcTransaction:54 - Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2d928643]
+2016-09-30 15:40:49 DEBUG JdbcTransaction:54 - Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2d928643]
+2016-09-30 15:40:49 DEBUG PooledDataSource:54 - Returned connection 764577347 to pool.
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]
+2016-09-30 15:40:49 INFO  PageRank:28 - [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 0 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 1 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 2 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 3 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 4 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 5 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 6 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 7 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 8 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 9 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 10 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 11 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 12 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 13 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 14 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 15 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 16 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 17 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 18 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 19 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 20 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 21 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 22 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 23 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 24 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:37 - startRank of site(vertex) 25 = 1.0
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 0 - 0.15000000000000002
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 1 - 0.8789156372680231
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 2 - 0.3368291024018534
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 3 - 0.9964428722634123
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 4 - 4.53315407721271
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 5 - 0.8402678251269653
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 6 - 0.6372919013168264
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 7 - 0.36180985507964414
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 8 - 0.21152110067575067
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 9 - 0.33769699204036185
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 10 - 0.5814022848022236
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 11 - 0.3406632550063402
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 12 - 0.3425219698284886
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 13 - 0.20823874681763493
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 14 - 0.3160239901587922
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 15 - 0.4001880141666639
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 16 - 0.19252885453290236
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 17 - 0.17337979871154435
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 18 - 0.4013047762618169
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 19 - 0.9699464536961105
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 20 - 0.4144015247455338
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 21 - 0.3159636872384002
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 22 - 0.2596903119765465
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 23 - 2.5727586398367417
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 24 - 3.780238338556528
+
+2016-09-30 15:40:49 INFO  PageRank:75 - pagerank of site 25 - 1.8708118745166793
+
+2016-09-30 15:40:49 INFO  PageRank:86 - convergenceRate = 5.755924926613812E-6, results are accurate enough
+2016-09-30 15:40:49 INFO  root:33 - [
+5. http://electronics.stackexchange.com/questions/260626/why-were-hatched-polygons-pours-used-instead-of-solid-pours-in-the-past; Rank: 4.53315407721271; , 
+25. http://worldbuilding.stackexchange.com/questions/56834/destroy-a-planet-inside-a-blackhole; Rank: 3.780238338556528; , 
+24. http://worldbuilding.stackexchange.com/questions/56710/how-does-the-booze-rat-fuel-its-defensive-mechanism; Rank: 2.5727586398367417; , 
+26. http://writers.stackexchange.com/questions/24804/i-wrote-a-book-and-am-getting-offers-for-to-publish-what-does-a-publishing-comp; Rank: 1.8708118745166793; , 
+4. http://codereview.stackexchange.com/questions/142784/dailyprogrammer-284-wandering-fingers; Rank: 0.9964428722634123; , 
+20. http://stackexchange.com/sites#science; Rank: 0.9699464536961105; , 
+6. http://ell.stackexchange.com/questions/104898/when-people-brag-about-their-abilities-and-belittle-their-opponents-before-a-bat; Rank: 0.8402678251269653; , 
+7. http://ell.stackexchange.com/questions/105079/what-is-a-plural-of-to-do-to-dos-or-to-does; Rank: 0.6372919013168264; , 
+11. http://meta.stackoverflow.com; Rank: 0.5814022848022236; , 
+21. http://stackexchange.com/sites#technology; Rank: 0.4144015247455338; , 
+19. http://stackexchange.com/sites#lifearts; Rank: 0.4013047762618169; , 
+16. http://scifi.stackexchange.com/questions/141609/was-gandalf-meant-to-confront-the-balrog; Rank: 0.4001880141666639; , 
+8. http://gamedev.stackexchange.com/questions/130580/why-dont-most-major-game-engines-use-gifs-for-animated-textures; Rank: 0.36180985507964414; , 
+13. http://puzzling.stackexchange.com/questions/43424/the-shrink-and-his-patient-part-2; Rank: 0.3425219698284886; , 
+12. http://physics.stackexchange.com/questions/282745/are-we-seeing-everything-slowly; Rank: 0.3406632550063402; , 
+10. http://math.stackexchange.com/questions/1947256/fish-tank-problem; Rank: 0.33769699204036185; , 
+3. http://codegolf.stackexchange.com/questions/94814/compute-the-mertens-function; Rank: 0.3368291024018534; , 
+15. http://rpg.stackexchange.com/questions/88553/how-to-deal-with-a-dm-who-controls-us-with-powerful-npcs; Rank: 0.3160239901587922; , 
+22. http://tex.stackexchange.com/questions/331857/how-can-i-recreate-the-following-image-of-a-grid-in-tikz; Rank: 0.3159636872384002; , 
+23. http://travel.stackexchange.com/questions/79820/are-there-any-postbuses-left-in-the-uk; Rank: 0.2596903119765465; , 
+9. http://linguistics.stackexchange.com/questions/19837/theory-application-how-would-someone-begin-translating-a-new-language; Rank: 0.21152110067575067; , 
+14. http://rpg.stackexchange.com/questions/88525/potion-of-longevity-and-a-9-year-old-character; Rank: 0.20823874681763493; , 
+17. http://security.stackexchange.com/questions/138216/why-do-we-not-require-websites-to-have-several-independent-certificates; Rank: 0.19252885453290236; , 
+18. http://stackexchange.com/sites#culturerecreation; Rank: 0.17337979871154435; , 
+1. http://askubuntu.com/questions/831124/which-file-formats-are-used-to-make-viruses-in-ubuntu; Rank: 0.15000000000000002; ]
