@@ -7,6 +7,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema pagerankProject
 -- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `pagerankProject` ;
 
 -- -----------------------------------------------------
 -- Schema pagerankProject
@@ -17,18 +18,22 @@ USE `pagerankProject` ;
 -- -----------------------------------------------------
 -- Table `pagerankProject`.`sites`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `pagerankProject`.`sites` ;
+
 CREATE TABLE IF NOT EXISTS `pagerankProject`.`sites` (
-  `site_id` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `url` LONGTEXT NOT NULL,
   `html` LONGTEXT CHARACTER SET 'utf8' NOT NULL,
   `pagerank` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`site_id`))
+  PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
 -- Table `pagerankProject`.`sites_have_links`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `pagerankProject`.`sites_have_links` ;
+
 CREATE TABLE IF NOT EXISTS `pagerankProject`.`sites_have_links` (
   `id_out` INT NOT NULL,
   `id_in` INT NOT NULL,
@@ -37,12 +42,12 @@ CREATE TABLE IF NOT EXISTS `pagerankProject`.`sites_have_links` (
   INDEX `fk_sites_has_sites_sites_idx` (`id_out` ASC),
   CONSTRAINT `fk_sites_has_sites_sites`
     FOREIGN KEY (`id_out`)
-    REFERENCES `pagerankProject`.`sites` (`site_id`)
+    REFERENCES `pagerankProject`.`sites` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_sites_has_sites_sites1`
     FOREIGN KEY (`id_in`)
-    REFERENCES `pagerankProject`.`sites` (`site_id`)
+    REFERENCES `pagerankProject`.`sites` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
