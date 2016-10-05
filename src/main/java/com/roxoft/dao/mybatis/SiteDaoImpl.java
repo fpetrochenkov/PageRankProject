@@ -1,6 +1,9 @@
 package com.roxoft.dao.mybatis;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -11,7 +14,7 @@ import com.roxoft.models.Site;
 public class SiteDaoImpl extends SessionFactory implements ISiteDao {
 
 	PageRank pageRank = new PageRank();
-	@Override
+	
 	public List<Site> getAllSites() {
 		List<Site> list;
 		SqlSession session = SessionFactory.getSession();
@@ -24,7 +27,6 @@ public class SiteDaoImpl extends SessionFactory implements ISiteDao {
 		return list;
 	}
 
-	@Override
 	public void insert(Site entity) {
 		SqlSession session = SessionFactory.getSession();
 		try {
@@ -34,7 +36,6 @@ public class SiteDaoImpl extends SessionFactory implements ISiteDao {
 		}
 	}
 
-	@Override
 	public void delete(int id) {
 		SqlSession session = SessionFactory.getSession();
 		try {
@@ -44,13 +45,66 @@ public class SiteDaoImpl extends SessionFactory implements ISiteDao {
 		}
 	}
 
-	@Override
 	public void update() {
 		SqlSession session = SessionFactory.getSession();		
 		try {
-			
 			session.update("mappers.updatePageRank");
-			
+		} finally {
+			session.close();
+		}
+	}
+	
+	public void insertSiteHaveLinks(Site site) {
+		SqlSession session = SessionFactory.getSession();
+		try {
+			for (String linkOut : site.getLinksOutStr()){
+				int siteId = 0;
+				int linkId = 0;
+				siteId = getSiteIdBySiteUrl(site.getUrl());
+				linkId = getSiteIdBySiteUrl(linkOut);
+				if ((siteId != 0)&(linkId != 0)){	
+					Map<String, Integer> hm = new HashMap<String, Integer>();
+					hm.put("id_out", siteId);
+					hm.put("id_in", linkId);
+					session.insert("mappers.insertSiteHaveLinks", hm);
+					session.commit();
+				}
+			}
+		} finally {
+			session.close();
+		}
+	}
+
+	public int getSiteIdBySiteUrl(String siteUrl) {
+		Integer siteId = null;
+		SqlSession session = SessionFactory.getSession();
+		try {
+				siteId = session.selectOne("mappers.getSiteIdBySiteUrl", siteUrl);
+				session.commit();	
+		} finally {
+			session.close();
+		}
+		if (siteId == null)
+			return 0;
+		else
+			return siteId;
+	}
+
+	public void insertSite(Site site) {
+		SqlSession session = SessionFactory.getSession();
+		try {
+			session.insert("mappers.insertSite", site);
+			session.commit();
+		} finally {
+			session.close();
+		}
+	}
+	
+	public void insertSites(ArrayList<Site> sites) {
+		SqlSession session = SessionFactory.getSession();
+		try {
+			session.insert("mappers.insertSites", sites);
+			session.commit();
 		} finally {
 			session.close();
 		}

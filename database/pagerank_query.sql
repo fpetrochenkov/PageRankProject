@@ -5,36 +5,37 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema pagerankProject
+-- Schema pagerank_schema
 -- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `pagerankProject` ;
+DROP SCHEMA IF EXISTS `pagerank_schema` ;
 
 -- -----------------------------------------------------
--- Schema pagerankProject
+-- Schema pagerank_schema
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `pagerankProject` DEFAULT CHARACTER SET utf8 ;
-USE `pagerankProject` ;
+CREATE SCHEMA IF NOT EXISTS `pagerank_schema` DEFAULT CHARACTER SET utf8 ;
+USE `pagerank_schema` ;
 
 -- -----------------------------------------------------
--- Table `pagerankProject`.`sites`
+-- Table `pagerank_schema`.`sites`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `pagerankProject`.`sites` ;
+DROP TABLE IF EXISTS `pagerank_schema`.`sites` ;
 
-CREATE TABLE IF NOT EXISTS `pagerankProject`.`sites` (
+CREATE TABLE IF NOT EXISTS `pagerank_schema`.`sites` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `url` LONGTEXT NOT NULL,
+  `url` VARCHAR(200) NOT NULL,
   `html` LONGTEXT CHARACTER SET 'utf8' NOT NULL,
   `pagerank` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`))
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `url_UNIQUE` (`url` ASC))
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `pagerankProject`.`sites_have_links`
+-- Table `pagerank_schema`.`sites_have_links`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `pagerankProject`.`sites_have_links` ;
+DROP TABLE IF EXISTS `pagerank_schema`.`sites_have_links` ;
 
-CREATE TABLE IF NOT EXISTS `pagerankProject`.`sites_have_links` (
+CREATE TABLE IF NOT EXISTS `pagerank_schema`.`sites_have_links` (
   `id_out` INT NOT NULL,
   `id_in` INT NOT NULL,
   PRIMARY KEY (`id_out`, `id_in`),
@@ -42,12 +43,12 @@ CREATE TABLE IF NOT EXISTS `pagerankProject`.`sites_have_links` (
   INDEX `fk_sites_has_sites_sites_idx` (`id_out` ASC),
   CONSTRAINT `fk_sites_has_sites_sites`
     FOREIGN KEY (`id_out`)
-    REFERENCES `pagerankProject`.`sites` (`id`)
+    REFERENCES `pagerank_schema`.`sites` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_sites_has_sites_sites1`
     FOREIGN KEY (`id_in`)
-    REFERENCES `pagerankProject`.`sites` (`id`)
+    REFERENCES `pagerank_schema`.`sites` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;

@@ -9,33 +9,27 @@ import com.roxoft.models.Site;
 
 public class InitialSystemPrinter {
 
-	private static final Logger initialSystemLogger = LogManager.getLogger(InitialSystemPrinter.class);
+	private static final Logger INITIALSYSTEMLOGGER = LogManager.getLogger(InitialSystemPrinter.class);
 
 	public void printInitialSystem(ArrayList<Site> sites) {
-
 		int numberOfSites = 1;
-
-		initialSystemLogger.info("Initial system");
-		initialSystemLogger.info("\nNumber of sites:" + sites.size());
-
+		INITIALSYSTEMLOGGER.info("Initial system");
+		INITIALSYSTEMLOGGER.info("\nNumber of sites:" + sites.size());
 		for (Site site : sites) {
-
-			initialSystemLogger.info("Site " + numberOfSites + ": " + site.getUrl() + "");
+			INITIALSYSTEMLOGGER.info("Site " + numberOfSites + ": " + 
+					site.getUrl() + "");
 			numberOfSites++;
-
 		}
-
 		for (Site site : sites) {
-
-			initialSystemLogger.info("\nSite: " + site.getUrl());
-
-			initialSystemLogger.info("Number of outgoing links: " + site.getLinksOutStr().size() + ".");
-
-			for (String link : site.getLinksOutStr())
-				initialSystemLogger.info("Outgoing link: " + link + "");
-
+			INITIALSYSTEMLOGGER.info("\nSite: " + site.getUrl());
+			INITIALSYSTEMLOGGER.info("Number of outgoing links: " + 
+					site.getLinksOutStr().size() + ".");
+			int numberOfLinks = 1;
+			for (String link : site.getLinksOutStr()){
+				INITIALSYSTEMLOGGER.info("Outgoing link " + numberOfLinks + " : " + link + "");
+				numberOfLinks++;
+			}
 		}
-
 	}
 
 }

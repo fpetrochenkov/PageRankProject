@@ -2,44 +2,37 @@
 <Configuration status="INFO">
 
   <Properties>
-
     <Property name="LOG_DIR">logs</Property>
     <Property name="ARCHIVE">${LOG_DIR}/archive</Property>
     <Property name="PATTERN">%-5level %d{ISO8601} [%t] %c:%M(%L): %m%n</Property>
-
   </Properties>
 
   <Appenders>
-
     <RollingFile name="InitialSystemFile" fileName="${LOG_DIR}/InitialSystem.log"
       filePattern="${ARCHIVE}/InitialSystem.log.%d{yyyy-MM-dd-hh-mm}.zip">
       <PatternLayout pattern="${PATTERN}"/>
-
       <Policies>
         <!--<TimeBasedTriggeringPolicy />-->
-        <SizeBasedTriggeringPolicy size="250 KB"/>
+        <SizeBasedTriggeringPolicy size="750 KB"/>
       </Policies>
-
       <DefaultRolloverStrategy max="20"/>
-
     </RollingFile>
-
     <Console name="Console" target="SYSTEM_OUT">
       <PatternLayout pattern="${PATTERN}"/>
     </Console>
-
   </Appenders>
 
   <Loggers>
-
     <Root level="all">
       <AppenderRef ref="Console"/>
     </Root>
-
     <Logger name="com.roxoft.io.InitialSystemPrinter" level="info" additivity="false">
       <AppenderRef ref="InitialSystemFile"/>
+      <!--<AppenderRef ref="Console"/>-->
+    </Logger>
+    <Logger name="com.roxoft.dao.mybatis.InitialSystemService" level="error" additivity="true">
       <AppenderRef ref="Console"/>
     </Logger>
-
   </Loggers>
+
 </Configuration>

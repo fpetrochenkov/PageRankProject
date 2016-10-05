@@ -33,9 +33,7 @@ public class Sites {
 			"http://stackexchange.com/work-here", "http://meta.stackexchange.com/"};
 
 	public String[] getSites() {
-
 		return sites;
-
 	}
 
 }

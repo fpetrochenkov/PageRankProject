@@ -5,7 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 
 public class LinksOutDaoImpl extends SessionFactory  {
 	
-	public List<String> getLinksOutBySiteId() {
+	public List<String> getLinksOutBySiteId12() {
 		List<String> linksOut;
 		SqlSession session = SessionFactory.getSession();
 		try {

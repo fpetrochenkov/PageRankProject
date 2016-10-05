@@ -1,13 +1,18 @@
 package com.roxoft.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.roxoft.models.Site;
 
 public interface ISiteDao {
 	
-	public List<Site> getAllSites ();
-	public void insert (Site entity);
-	public void delete (int id);
-	public void update ();
+	List<Site> getAllSites ();
+	void insertSite(Site site);
+	void insertSites(ArrayList<Site> sites);
+	void insertSiteHaveLinks(Site site);
+	int getSiteIdBySiteUrl(String siteUrl);
+	void insert (Site entity);
+	void delete (int id);
+	void update ();
 
 }

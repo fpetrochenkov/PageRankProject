@@ -4,37 +4,59 @@
 <mapper namespace="mappers">
 
 	<resultMap id="SiteResultMap" type="Site">
-			<id property="id" column="site_id"/>
-					<result column="url" property="url"/>
-					<result column="html" property="html"/>
-          <result column="pagerank" property="pageRank"/>
-					<collection  property="linksOut" column="site_id"
-								 javaType="List"
-				        ofType="Integer"
-								 select="mappers.getLinksOutBySiteId"
-								 fetchType="eager"
-					/>
+		<id property="id" column="id"/>
+		<result column="url" property="url"/>
+		<result column="html" property="html"/>
+    <result column="pagerank" property="pageRank"/>
+		<collection
+			property="linksOut"
+			column="id"
+			javaType="List"
+			ofType="Integer"
+			select="mappers.getLinksOutBySiteId"
+			fetchType="eager"
+		/>
 	</resultMap>
 
 	<select id="getAllSites" resultMap="SiteResultMap">
-		select * from prfinall.sites
+		select * from sites
 		order by pagerank
 	</select>
 
 	<update id="updatePageRank" parameterType="Site">
-    update sites set sites.pagerank = #{pagerank}
+    update sites set pagerank = #{pagerank}
 	</update>
 
 	<delete id="deleteSiteById" parameterType="int">
-	 DELETE FROM prfinal.sites WHERE site_id= #{site_id}
+		DELETE FROM sites WHERE id= #{id}
 	</delete>
 
-	<insert id = "insert" parameterType="Site">
-		INSERT INTO prfinal.sites (site_id)
-		VALUES (#{site_id})
+	<insert id="insert" parameterType="Site">
+		INSERT INTO sites (id)
+		VALUES (#{id})
 		 <selectKey keyProperty = "id" resultType = "int" order = "AFTER">
 				select last_insert_id() as id
 		 </selectKey>
+	</insert>
+
+	<insert id="insertSite">
+  	INSERT IGNORE INTO sites (url, html, pagerank)	VALUES (#{url}, #{html}, 1.0)
+	</insert>
+
+	<insert id="insertSites">
+  	INSERT IGNORE INTO sites (url, html, pagerank)	VALUES
+			<foreach item="item" collection="list" separator=",">
+    		(#{item.url}, #{item.html}, 1.0)
+  		</foreach>
+	</insert>
+
+	<select id="getSiteIdBySiteUrl" parameterType="String" resultType="Integer">
+		SELECT id FROM sites WHERE url = #{url}
+	</select>
+
+	<insert id="insertSiteHaveLinks" parameterType="java.util.HashMap">
+  	INSERT IGNORE INTO sites_have_links (id_out, id_in)	VALUES (#{id_out}, #{id_in})
+
 	</insert>
 
 	</mapper>

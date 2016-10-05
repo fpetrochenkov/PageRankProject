@@ -4,13 +4,13 @@
 <mapper namespace="mappers">
 
 	<resultMap id="LinksOutResultMap" type="Integer">
-    <result property="Integer" column="site_id" javaType="Integer"/>
+    <result property="Integer" column="id" javaType="Integer"/>
   </resultMap>
 
 	<select id="getLinksOutBySiteId" parameterType="java.lang.Integer" resultType="Integer"  resultMap="LinksOutResultMap">
-		SELECT sites.site_id FROM sites INNER JOIN sites_have_links
-    ON sites_have_links.id_in = sites.site_id
-    WHERE sites_have_links.id_out = #{site_id};
+		SELECT sites.id FROM sites INNER JOIN sites_have_links
+    ON sites_have_links.id_in = sites.id
+    WHERE sites_have_links.id_out = #{id};
 	</select>
 
 </mapper>
