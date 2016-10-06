@@ -2,9 +2,10 @@ package com.roxoft.data;
 
 public class Sites {
 
-	private String sites[] = {"http://blog.stackoverflow.com/2009/06/attribution-required/", "http://stackexchange.com/sites#science",
-			"http://stackexchange.com/sites#culturerecreation", "http://stackexchange.com/sites#lifearts",
-			"http://stackexchange.com/sites#technology", "http://meta.stackoverflow.com",
+	private String sites[] = { "http://blog.stackoverflow.com/2009/06/attribution-required/",
+			"http://stackexchange.com/sites#science", "http://stackexchange.com/sites#culturerecreation",
+			"http://stackexchange.com/sites#lifearts", "http://stackexchange.com/sites#technology",
+			"http://meta.stackoverflow.com",
 			"http://writers.stackexchange.com/questions/24804/i-wrote-a-book-and-am-getting-offers-for-to-publish-what-does-a-publishing-comp",
 			"http://ell.stackexchange.com/questions/104898/when-people-brag-about-their-abilities-and-belittle-their-opponents-before-a-bat",
 			"http://security.stackexchange.com/questions/138216/why-do-we-not-require-websites-to-have-several-independent-certificates",
@@ -30,7 +31,7 @@ public class Sites {
 			"http://gaming.stackexchange.com/questions/286814/where-does-the-term-praise-the-sun-come-from",
 			"http://unix.stackexchange.com/questions/313107/zipped-hard-drive-image-very-big",
 			"http://disqus.com/?ref_noscript", "http://stackexchange.com/sites", "http://stackexchange.com/about",
-			"http://stackexchange.com/work-here", "http://meta.stackexchange.com/"};
+			"http://stackexchange.com/work-here", "http://meta.stackexchange.com/" };
 
 	public String[] getSites() {
 		return sites;

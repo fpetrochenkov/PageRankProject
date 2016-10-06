@@ -11,8 +11,6 @@ public interface ISiteDao {
 	void insertSites(ArrayList<Site> sites);
 	void insertSiteHaveLinks(Site site);
 	int getSiteIdBySiteUrl(String siteUrl);
-	void insert (Site entity);
 	void delete (int id);
-	void update ();
 
 }

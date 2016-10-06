@@ -69,9 +69,9 @@ public class Site {
 	public void setLinksOut(List<Integer> linksOut) {
 		this.linksOut = linksOut;
 	}
-	
+
 	public String toString() {
 		return "\n" + id + ". " + url + "; Rank: " + pageRank + ";";
 	}
-	
+
 }

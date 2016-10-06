@@ -2,14 +2,14 @@ package com.roxoft.algorithm;
 
 import java.util.Arrays;
 import java.util.List;
-
 import com.roxoft.exceptions.ConvergenceRateException;
 import com.roxoft.models.Site;
-
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class PageRank {
-	private static final Logger Log = Logger.getLogger(PageRank.class);
+
+	private static final Logger LOG = LogManager.getLogger(PageRank.class);
 	public static int adjacencyMatrix[][];
 	public static double dampingFactor = 0.85;
 
@@ -25,7 +25,7 @@ public class PageRank {
 					adjacencyMatrix[i][j] = 0;
 			}
 		for (int[] array : adjacencyMatrix) {
-			Log.info(Arrays.toString(array));
+			LOG.info(Arrays.toString(array));
 		}
 
 		double pageRank[] = new double[vertices];
@@ -34,7 +34,7 @@ public class PageRank {
 
 		for (i = 0; i < vertices; i++) {
 			pageRank[i] = sites.get(i).getPageRank();
-			Log.info("startRank of site(vertex) " + i + " = " + pageRank[i] + "\n");
+			LOG.info("startRank of site(vertex) " + i + " = " + pageRank[i] + "\n");
 		}
 
 		for (int iterationNumber = 1; iterationNumber < 25; iterationNumber++) {
@@ -72,7 +72,7 @@ public class PageRank {
 		}
 
 		for (i = 0; i < vertices; i++) {
-			Log.info("pagerank of site " + i + " - " + sites.get(i).getPageRank() + "\n");
+			LOG.info("pagerank of site " + i + " - " + sites.get(i).getPageRank() + "\n");
 		}
 
 		double convergenceRate = 0;
@@ -83,7 +83,7 @@ public class PageRank {
 		if (convergenceRate > 0.001)
 			throw new ConvergenceRateException("Error, convergenceRate = " + convergenceRate + " is big enough");
 		else
-			Log.info("convergenceRate = " + convergenceRate + ", results are accurate enough");
+			LOG.info("convergenceRate = " + convergenceRate + ", results are accurate enough");
 		return sites;
 	}
 

@@ -7,11 +7,12 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public abstract class SessionFactory {
 
-	private static final Logger LOG = Logger.getLogger(SessionFactory.class);
+	private static final Logger LOG = LogManager.getLogger(SessionFactory.class);
 
 	private static final String resource = "mybatis/mybatis_config.xml";
 	private static SqlSessionFactory sessionFactory = null;

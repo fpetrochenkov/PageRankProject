@@ -16,16 +16,14 @@ public class InitialSystemPrinter {
 		INITIALSYSTEMLOGGER.info("Initial system");
 		INITIALSYSTEMLOGGER.info("\nNumber of sites:" + sites.size());
 		for (Site site : sites) {
-			INITIALSYSTEMLOGGER.info("Site " + numberOfSites + ": " + 
-					site.getUrl() + "");
+			INITIALSYSTEMLOGGER.info("Site " + numberOfSites + ": " + site.getUrl() + "");
 			numberOfSites++;
 		}
 		for (Site site : sites) {
 			INITIALSYSTEMLOGGER.info("\nSite: " + site.getUrl());
-			INITIALSYSTEMLOGGER.info("Number of outgoing links: " + 
-					site.getLinksOutStr().size() + ".");
+			INITIALSYSTEMLOGGER.info("Number of outgoing links: " + site.getLinksOutStr().size() + ".");
 			int numberOfLinks = 1;
-			for (String link : site.getLinksOutStr()){
+			for (String link : site.getLinksOutStr()) {
 				INITIALSYSTEMLOGGER.info("Outgoing link " + numberOfLinks + " : " + link + "");
 				numberOfLinks++;
 			}

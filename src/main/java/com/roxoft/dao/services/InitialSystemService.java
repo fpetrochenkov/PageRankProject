@@ -44,29 +44,28 @@ public class InitialSystemService {
 		}
 	}
 
-	private void fillSitesWithLinks() throws IOException{
-		try{
+	private void fillSitesWithLinks() throws IOException {
+		try {
 			for (Site site : sites) {
 				String url = site.getUrl();
 				Set<String> linksSet = new HashSet<String>();
 				Document doc;
-					doc = Jsoup.connect(url).get();
-					Elements links = doc.select("a[href]");
-					for (Element link : links) {
-						linksSet.add(link.attr("abs:href").toString());
-					}
-					ArrayList<String> linksArayList = new ArrayList<String>();
-					linksArayList.addAll(linksSet);
-					site.setLinksOutStr(linksArayList);
-			} 
+				doc = Jsoup.connect(url).get();
+				Elements links = doc.select("a[href]");
+				for (Element link : links) {
+					linksSet.add(link.attr("abs:href").toString());
+				}
+				ArrayList<String> linksArayList = new ArrayList<String>();
+				linksArayList.addAll(linksSet);
+				site.setLinksOutStr(linksArayList);
+			}
 		} catch (IOException e) {
-			INITIALSYSTEMSERVICELOGGER.error(
-					"IOException in InitialSystemService.fillSitesWithLinks()",e);
-		}	
+			INITIALSYSTEMSERVICELOGGER.error("IOException in InitialSystemService.fillSitesWithLinks()", e);
+		}
 	}
 
 	private void fillSitesWithHtmls() throws IOException {
-		try{
+		try {
 			for (Site site : sites) {
 				String url = site.getUrl();
 				Document doc;
@@ -74,8 +73,7 @@ public class InitialSystemService {
 				site.setHtml(doc.html());
 			}
 		} catch (IOException e) {
-			INITIALSYSTEMSERVICELOGGER.error(
-					"IOException in InitialSystemService.fillSitesWithHtmls()",e);
+			INITIALSYSTEMSERVICELOGGER.error("IOException in InitialSystemService.fillSitesWithHtmls()", e);
 		}
 	}
 
