@@ -21,7 +21,8 @@ public class Main {
 			InitialSystemService iss = new InitialSystemService();
 			iss.recordInitialSystem(35);
 			SiteDaoImpl s = new SiteDaoImpl();
-			PageRank.algotihmPageRank(s.getAllSites());
+			PageRank pagerank = new PageRank();
+			pagerank.algotihmPageRank(s.getAllSites());
 			LOG.info("Enter the keyword: ");
 			String keyword = sc.nextLine();
 			SiteService service = new SiteService();
