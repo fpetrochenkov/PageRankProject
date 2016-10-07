@@ -13,7 +13,7 @@ public class PageRank {
 	public int adjacencyMatrix[][];
 	public double dampingFactor = 0.85;
 
-	public List<Site> algotihmPageRank(List<Site> sites) throws ConvergenceRateException {
+	public List<Site> algotihmPageRank(List<Site> sites) {
 		try {
 			int i, j, k;
 			int vertices = sites.size();

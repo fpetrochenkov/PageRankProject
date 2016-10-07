@@ -27,6 +27,7 @@ public class Main {
 			String keyword = sc.nextLine();
 			SiteService service = new SiteService();
 			service.getListSitesByKeyword(keyword);
+			throw new ConvergenceRateException("Error, convergenceRate is big enough");
 		} catch (IOException e) {
 			LOG.error("IOException e");
 		} catch (ConvergenceRateException e) {

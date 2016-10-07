@@ -28,6 +28,7 @@ public class SiteService {
 				if (site.getHtml().toString().contains(keyword))
 					sitesByKeyword.add(site);
 				Collections.sort(sitesByKeyword, new ComparePageRanks());
+				throw new ConvergenceRateException("Error, convergenceRate is big enough");
 			}
 		} catch (ConvergenceRateException e) {
 			LOG.error("ConvergenceRateException e");
