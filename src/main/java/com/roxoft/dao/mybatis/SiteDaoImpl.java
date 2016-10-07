@@ -11,13 +11,13 @@ import com.roxoft.algorithm.PageRank;
 import com.roxoft.dao.ISiteDao;
 import com.roxoft.models.Site;
 
-public class SiteDaoImpl extends SessionFactory implements ISiteDao {
+public class SiteDaoImpl implements ISiteDao {
 
 	PageRank pageRank = new PageRank();
 
 	public List<Site> getAllSites() {
 		List<Site> list;
-		SqlSession session = SessionFactory.getSession();
+		SqlSession session = SessionFactory.getInstance().getSqlSessionFactory().openSession();
 		try {
 			list = session.selectList("mappers.getAllSites");
 			session.commit();
@@ -28,7 +28,7 @@ public class SiteDaoImpl extends SessionFactory implements ISiteDao {
 	}
 
 	public void delete(int id) {
-		SqlSession session = SessionFactory.getSession();
+		SqlSession session = SessionFactory.getInstance().getSqlSessionFactory().openSession();
 		try {
 			session.delete("mappers.deleteSiteById", id);
 		} finally {
@@ -37,7 +37,7 @@ public class SiteDaoImpl extends SessionFactory implements ISiteDao {
 	}
 
 	public void insertSiteHaveLinks(Site site) {
-		SqlSession session = SessionFactory.getSession();
+		SqlSession session = SessionFactory.getInstance().getSqlSessionFactory().openSession();
 		try {
 			for (String linkOut : site.getLinksOutStr()) {
 				int siteId = 0;
@@ -59,7 +59,7 @@ public class SiteDaoImpl extends SessionFactory implements ISiteDao {
 
 	public int getSiteIdBySiteUrl(String siteUrl) {
 		Integer siteId = null;
-		SqlSession session = SessionFactory.getSession();
+		SqlSession session = SessionFactory.getInstance().getSqlSessionFactory().openSession();
 		try {
 			siteId = session.selectOne("mappers.getSiteIdBySiteUrl", siteUrl);
 			session.commit();
@@ -73,7 +73,7 @@ public class SiteDaoImpl extends SessionFactory implements ISiteDao {
 	}
 
 	public void insertSite(Site site) {
-		SqlSession session = SessionFactory.getSession();
+		SqlSession session = SessionFactory.getInstance().getSqlSessionFactory().openSession();
 		try {
 			session.insert("mappers.insertSite", site);
 			session.commit();
@@ -83,7 +83,7 @@ public class SiteDaoImpl extends SessionFactory implements ISiteDao {
 	}
 
 	public void insertSites(ArrayList<Site> sites) {
-		SqlSession session = SessionFactory.getSession();
+		SqlSession session = SessionFactory.getInstance().getSqlSessionFactory().openSession();
 		try {
 			session.insert("mappers.insertSites", sites);
 			session.commit();

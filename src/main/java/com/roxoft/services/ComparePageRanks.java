@@ -1,4 +1,4 @@
-package com.roxoft.dao.services;
+package com.roxoft.services;
 
 import java.util.Comparator;
 

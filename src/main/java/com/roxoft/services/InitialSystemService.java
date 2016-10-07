@@ -1,11 +1,12 @@
-package com.roxoft.dao.services;
+package com.roxoft.services;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -18,22 +19,10 @@ import com.roxoft.randomFillers.SitesRandomFiller;
 
 public class InitialSystemService {
 
-	private static final Logger INITIALSYSTEMSERVICELOGGER = Logger.getLogger(InitialSystemService.class);
-	private ArrayList<Site> sites = new ArrayList<Site>();
+	private static final Logger LOGGER = LogManager.getLogger(InitialSystemService.class);
 
-	private void cleanData() {
-		if (!(sites.isEmpty()))
-			sites.clear();
-	}
-
-	private void fillInitialSystem(int numberOfSites) throws IOException {
-		cleanData();
-		fillSitesURLs(numberOfSites);
-		fillSitesWithHtmls();
-		fillSitesWithLinks();
-	}
-
-	private void fillSitesURLs(int numberOfSites) {
+	private ArrayList<Site> fillSitesURLs(int numberOfSites) {
+		ArrayList<Site> sites = new ArrayList<Site>();
 		SitesRandomFiller srf = new SitesRandomFiller();
 		ArrayList<String> sitesURLs = new ArrayList<String>();
 		sitesURLs.addAll(srf.getSitesURLs(numberOfSites));
@@ -42,15 +31,17 @@ public class InitialSystemService {
 			site.setUrl(url);
 			sites.add(site);
 		}
+		return sites;
 	}
 
-	private void fillSitesWithLinks() throws IOException {
+	private ArrayList<Site> fillSitesWithHtmlsAndLinks(ArrayList<Site> sites) {
 		try {
 			for (Site site : sites) {
 				String url = site.getUrl();
 				Set<String> linksSet = new HashSet<String>();
 				Document doc;
 				doc = Jsoup.connect(url).get();
+				site.setHtml(doc.html());
 				Elements links = doc.select("a[href]");
 				for (Element link : links) {
 					linksSet.add(link.attr("abs:href").toString());
@@ -60,29 +51,14 @@ public class InitialSystemService {
 				site.setLinksOutStr(linksArayList);
 			}
 		} catch (IOException e) {
-			INITIALSYSTEMSERVICELOGGER.error("IOException in InitialSystemService.fillSitesWithLinks()", e);
+			LOGGER.error("IOException in InitialSystemService.fillSitesWithHtmlsAndLinks()", e);
 		}
-	}
-
-	private void fillSitesWithHtmls() throws IOException {
-		try {
-			for (Site site : sites) {
-				String url = site.getUrl();
-				Document doc;
-				doc = Jsoup.connect(url).get();
-				site.setHtml(doc.html());
-			}
-		} catch (IOException e) {
-			INITIALSYSTEMSERVICELOGGER.error("IOException in InitialSystemService.fillSitesWithHtmls()", e);
-		}
-	}
-
-	public ArrayList<Site> getSites() {
 		return sites;
 	}
 
 	public void recordInitialSystem(int numberOfSites) throws IOException {
-		fillInitialSystem(numberOfSites);
+		ArrayList<Site> sites = new ArrayList<Site>();
+		sites.addAll(fillSitesWithHtmlsAndLinks(fillSitesURLs(numberOfSites)));
 		InitialSystemPrinter isp = new InitialSystemPrinter();
 		isp.printInitialSystem(sites);
 		SiteDaoImpl sdi = new SiteDaoImpl();

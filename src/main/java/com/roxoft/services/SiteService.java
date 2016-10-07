@@ -1,4 +1,4 @@
-package com.roxoft.dao.services;
+package com.roxoft.services;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,12 +15,9 @@ public class SiteService {
 	private static final Logger ROOTLOGGER = LogManager.getLogger(SiteService.class);
 	private static final Logger LOG = LogManager.getLogger(SiteService.class);
 
-	ComparePageRanks c = new ComparePageRanks();
-	Site s1 = new Site();
-	Site s2 = new Site();
 	private List<Site> sitesByKeyword = new ArrayList<Site>();
-	SiteDaoImpl siteDao = new SiteDaoImpl();
-	PageRank pageRank = new PageRank();
+	private SiteDaoImpl siteDao = new SiteDaoImpl();
+	private PageRank pageRank = new PageRank();
 
 	public List<Site> getListSitesByKeyword(String keyword) {
 		try {
