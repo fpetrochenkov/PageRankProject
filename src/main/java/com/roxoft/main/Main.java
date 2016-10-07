@@ -20,7 +20,7 @@ public class Main {
 
 		try {
 			InitialSystemService iss = new InitialSystemService();
-			iss.recordInitialSystem(15);
+			iss.recordInitialSystem(5);
 			/*SiteDaoImpl s = new SiteDaoImpl();
 			PageRank pagerank = new PageRank();
 			pagerank.algotihmPageRank(s.getAllSites());
