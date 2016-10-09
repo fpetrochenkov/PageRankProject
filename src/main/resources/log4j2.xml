@@ -25,17 +25,17 @@
 
 	<Loggers>
 		<Root level="error">
-			<AppenderRef ref="Console"/>
+			<AppenderRef ref="Console" />
 		</Root>
 		<Logger name="com.roxoft.io.InitialSystemPrinter" level="info"
 			additivity="false">
 			<AppenderRef ref="InitialSystemFile" />
-			<AppenderRef ref="Console" level="info"/>
+			<AppenderRef ref="Console" level="info" />
 			<!--<AppenderRef ref="Console"/> -->
 		</Logger>
-		<Logger name="com.roxoft.services.InitialSystemService"
-			level="error" additivity="true">
-			<AppenderRef ref="Console" level="error"/>
+		<Logger name="com.roxoft.services.InitialSystemService" level="error"
+			additivity="true">
+			<AppenderRef ref="Console" level="error" />
 			<!--<AppenderRef ref="Console"/> -->
 		</Logger>
 	</Loggers>

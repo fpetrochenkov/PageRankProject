@@ -10,10 +10,10 @@ import org.apache.logging.log4j.Logger;
 public class PageRank {
 
 	private static final Logger LOG = LogManager.getLogger(PageRank.class);
-	public int adjacencyMatrix[][];
-	public double dampingFactor = 0.85;
 
 	public List<Site> algotihmPageRank(List<Site> sites) {
+		int adjacencyMatrix[][];
+		double dampingFactor = 0.85;
 		try {
 			int i, j, k;
 			int vertices = sites.size();

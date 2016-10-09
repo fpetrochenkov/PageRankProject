@@ -4,16 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.apache.ibatis.session.SqlSession;
-
-import com.roxoft.algorithm.PageRank;
 import com.roxoft.dao.ISiteDao;
 import com.roxoft.models.Site;
 
 public class SiteDaoImpl implements ISiteDao {
-
-	PageRank pageRank = new PageRank();
 
 	public List<Site> getAllSites() {
 		List<Site> list;

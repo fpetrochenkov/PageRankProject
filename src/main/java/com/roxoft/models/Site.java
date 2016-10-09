@@ -14,20 +14,20 @@ public class Site {
 	private List<Integer> linksOut;
 	private List<String> linksOutStr;
 
-	public List<String> getLinksOutStr() {
-		return linksOutStr;
-	}
-
-	public void setLinksOutStr(List<String> linksOutStr) {
-		this.linksOutStr = linksOutStr;
-	}
-
 	public Site(int id, String url, double pageRank, String html, List<Integer> linksOut) {
 		this.id = id;
 		this.url = url;
 		this.pageRank = pageRank;
 		this.html = html;
 		this.linksOut = linksOut;
+	}
+
+	public List<String> getLinksOutStr() {
+		return linksOutStr;
+	}
+
+	public void setLinksOutStr(List<String> linksOutStr) {
+		this.linksOutStr = linksOutStr;
 	}
 
 	public int getId() {

@@ -3,9 +3,7 @@ package com.roxoft.dao.mybatis;
 import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
-import com.roxoft.dao.ILinksOutDao;
-
-public class LinksOutDaoImpl implements ILinksOutDao {
+public class LinksOutDao  {
 
 	public List<String> getLinksOutBySiteId12() {
 		List<String> linksOut;
@@ -18,10 +16,5 @@ public class LinksOutDaoImpl implements ILinksOutDao {
 		return linksOut;
 	}
 
-	@Override
-	public List<String> getLinksOutBySiteId(int siteId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 }

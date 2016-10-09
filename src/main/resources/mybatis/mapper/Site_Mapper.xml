@@ -24,7 +24,8 @@
 	</delete>
 
 	<insert id="insertSite">
-		INSERT IGNORE INTO sites (url, html, pagerank) VALUES (#{url}, #{html}, 1.0)
+		INSERT IGNORE INTO sites (url, html, pagerank) VALUES
+		(#{url}, #{html}, 1.0)
 	</insert>
 
 	<insert id="insertSites">
@@ -40,7 +41,8 @@
 	</select>
 
 	<insert id="insertSiteHaveLinks" parameterType="java.util.HashMap">
-		INSERT IGNORE INTO sites_have_links (id_out, id_in) VALUES (#{id_out},
+		INSERT IGNORE
+		INTO sites_have_links (id_out, id_in) VALUES (#{id_out},
 		#{id_in})
 
 	</insert>

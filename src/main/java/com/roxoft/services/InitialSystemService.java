@@ -19,7 +19,7 @@ import com.roxoft.randomFillers.SitesRandomFiller;
 
 public class InitialSystemService {
 
-	private static final Logger LOGGER = LogManager.getLogger(InitialSystemService.class);
+	private static final Logger LOG = LogManager.getLogger(InitialSystemService.class);
 
 	private ArrayList<Site> fillSitesURLs(int numberOfSites) {
 		ArrayList<Site> sites = new ArrayList<Site>();
@@ -51,7 +51,7 @@ public class InitialSystemService {
 				site.setLinksOutStr(linksArayList);
 			}
 		} catch (IOException e) {
-			LOGGER.error("IOException in InitialSystemService.fillSitesWithHtmlsAndLinks()", e);
+			LOG.error("IOException in InitialSystemService.fillSitesWithHtmlsAndLinks()", e);
 		}
 		return sites;
 	}

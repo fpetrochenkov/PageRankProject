@@ -12,14 +12,12 @@ import com.roxoft.models.Site;
 
 public class SiteService {
 
-	private static final Logger ROOTLOGGER = LogManager.getLogger(SiteService.class);
 	private static final Logger LOG = LogManager.getLogger(SiteService.class);
 
-	private List<Site> sitesByKeyword = new ArrayList<Site>();
-	private SiteDaoImpl siteDao = new SiteDaoImpl();
-	private PageRank pageRank = new PageRank();
-
 	public List<Site> getListSitesByKeyword(String keyword) {
+		List<Site> sitesByKeyword = new ArrayList<Site>();
+		SiteDaoImpl siteDao = new SiteDaoImpl();
+		PageRank pageRank = new PageRank();
 		try {
 			for (Site site : pageRank.algotihmPageRank(siteDao.getAllSites())) {
 				if (site.getHtml().toString().contains(keyword))
@@ -30,13 +28,9 @@ public class SiteService {
 		} catch (ConvergenceRateException e) {
 			LOG.error("ConvergenceRateException e");
 		}
-		ROOTLOGGER.info(sitesByKeyword.toString());
+		LOG.info(sitesByKeyword.toString());
 		return sitesByKeyword;
 
-	}
-
-	public List<Site> getSitesByKeyword() {
-		return sitesByKeyword;
 	}
 
 }
