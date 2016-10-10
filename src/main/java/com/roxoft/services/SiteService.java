@@ -14,19 +14,14 @@ public class SiteService {
 
 	private static final Logger LOG = LogManager.getLogger(SiteService.class);
 
-	public List<Site> getListSitesByKeyword(String keyword) {
+	public List<Site> getListSitesByKeyword(String keyword) throws ConvergenceRateException {
 		List<Site> sitesByKeyword = new ArrayList<Site>();
 		SiteDaoImpl siteDao = new SiteDaoImpl();
 		PageRank pageRank = new PageRank();
-		try {
-			for (Site site : pageRank.algotihmPageRank(siteDao.getAllSites())) {
-				if (site.getHtml().toString().contains(keyword))
-					sitesByKeyword.add(site);
-				Collections.sort(sitesByKeyword, new ComparePageRanks());
-				throw new ConvergenceRateException("Error, convergenceRate is big enough");
-			}
-		} catch (ConvergenceRateException e) {
-			LOG.error("ConvergenceRateException e");
+		for (Site site : pageRank.algotihmPageRank(siteDao.getAllSites())) {
+			if (site.getHtml().toString().contains(keyword))
+				sitesByKeyword.add(site);
+			Collections.sort(sitesByKeyword, new ComparePageRanks());				
 		}
 		LOG.info(sitesByKeyword.toString());
 		return sitesByKeyword;

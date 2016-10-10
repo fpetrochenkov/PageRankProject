@@ -11,9 +11,11 @@ public class PageRank {
 
 	private static final Logger LOG = LogManager.getLogger(PageRank.class);
 
+	private int adjacencyMatrix[][];
+	private double dampingFactor = 0.85;
+
 	public List<Site> algotihmPageRank(List<Site> sites) {
-		int adjacencyMatrix[][];
-		double dampingFactor = 0.85;
+
 		try {
 			int i, j, k;
 			int vertices = sites.size();
@@ -86,7 +88,7 @@ public class PageRank {
 			else
 				LOG.info("convergenceRate = " + convergenceRate + ", results are accurate enough");
 		} catch (ConvergenceRateException e) {
-			LOG.error("ConvergenceRateException e");
+			LOG.error("ConvergenceRateException", e);
 		}
 		return sites;
 	}

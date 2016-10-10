@@ -9,9 +9,9 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class SessionFactory {
+public  class SessionFactory {
 	
-	private static final Logger rootLogger = LogManager.getRootLogger();
+	private static final Logger LOG = LogManager.getRootLogger();
 	
 	private static SessionFactory sessionFactory;
 	private SqlSessionFactory sqlSessionFactory;
@@ -23,7 +23,7 @@ public class SessionFactory {
 			inputStream = Resources.getResourceAsStream(resource);
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		} catch (IOException e) {	
-			rootLogger.error("IOException", e);
+			LOG.error("IOException", e);
 		}
 	}
 

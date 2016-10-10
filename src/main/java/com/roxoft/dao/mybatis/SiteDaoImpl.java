@@ -5,12 +5,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+
 import com.roxoft.dao.ISiteDao;
 import com.roxoft.models.Site;
 
 public class SiteDaoImpl implements ISiteDao {
 
-	public List<Site> getAllSites() {
+	public List<Site> getAllSites() {		
 		List<Site> list;
 		SqlSession session = SessionFactory.getInstance().getSqlSessionFactory().openSession();
 		try {
